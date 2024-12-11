@@ -6,6 +6,8 @@ import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import vueDevTools from 'vite-plugin-vue-devtools'
+//🔻 https://www.npmjs.com/package/vite-plugin-radar
+import { VitePluginRadar } from 'vite-plugin-radar'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -45,7 +47,14 @@ export default defineConfig({
       },
       vueTemplate: true,
     }),
-    vueDevTools()
+    vueDevTools(),
+    VitePluginRadar({
+      // 🔻 Google Analytics tag injection
+      // https://www.npmjs.com/package/vite-plugin-radar
+      analytics: {
+        id: 'G-SJXC012ZZD',
+      },
+    })
   ],
   define: { 'process.env': {} },
   resolve: {
