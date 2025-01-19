@@ -5,7 +5,7 @@
         <h1 class="text-center">鈴聲設定</h1>
       </v-col>
       <v-col cols="12">
-        <v-table>
+        <v-table class="custom-table">
           <thead>
             <tr>
               <th>名稱</th>
@@ -45,6 +45,13 @@ import { useSettingsStore } from '@/stores/settings'
 const settings = useSettingsStore()
 
 </script>
+
+<style>
+.custom-table {
+  background-color: #9D9285 !important;
+  border-radius: 10px !important;
+}
+</style>
 
 <!-- 方法2️⃣ 使用 json 格式定義頁面 title -->
 <!-- <route lang="json">

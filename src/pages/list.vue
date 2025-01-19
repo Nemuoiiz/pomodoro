@@ -18,7 +18,7 @@
           @keydown.enter="onInputSubmit"
           @click:append="onInputSubmit"
         ></v-text-field>
-        <v-table>
+        <v-table class="custom-table">
           <thead>
             <tr>
               <th>事項</th>
@@ -62,7 +62,7 @@
         <h1 class="text-center">已完成</h1>
       </v-col>
       <v-col cols="12">
-        <v-table>
+        <v-table class="custom-table">
           <thead>
             <tr>
               <th>事項</th>
@@ -121,6 +121,13 @@ const onEditSubmit = (id, i) => {
   confirmEditItem(id)
 }
 </script>
+
+<style>
+.custom-table {
+  background-color: #9D9285 !important;
+  border-radius: 10px !important;
+}
+</style>
 
 <!-- route lang 沒有打的話，預設即 yaml -->
 <route lang="yaml">

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- discord 連結線的顏色 -->
@@ -46,6 +47,19 @@
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
+
+  <style>
+    /* 預設所有文字使用 Kiwi Maru（適用於中文） */
+    * {
+      font-family: "Zen Maru Gothic", serif;
+    }
+
+    /* 針對英文內容使用 Lilita One */
+    :lang(en) {
+      font-family: 'Lilita One', cursive;
+    }
+  </style>
+
 </body>
 
 </html>

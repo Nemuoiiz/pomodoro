@@ -3,7 +3,7 @@
     <v-row>
 
       <v-col cols="12">
-        <h1>目前事由 {{ currentText }}</h1>
+        <h1>目前 ✦ {{ currentText }}</h1>
       </v-col>
 
       <v-col cols="12">
