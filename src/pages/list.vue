@@ -46,12 +46,12 @@
               </td>
               <td>
                 <template v-if="item.edit">
-                  <v-btn icon="mdi-check" @click="onEditSubmit(item.id, i)"></v-btn>
-                  <v-btn icon="mdi-undo" @click="cancelEditItem(item.id)"></v-btn>
+                  <v-btn class="sm-btn" icon="mdi-check" @click="onEditSubmit(item.id, i)"></v-btn>
+                  <v-btn class="sm-btn" icon="mdi-undo" @click="cancelEditItem(item.id)"></v-btn>
                 </template>
                 <template v-else>
-                  <v-btn icon="mdi-pencil" @click="editItem(item.id)"></v-btn>
-                  <v-btn icon="mdi-delete" @click="delItem(item.id)"></v-btn>
+                  <v-btn class="sm-btn" icon="mdi-pencil" @click="editItem(item.id)"></v-btn>
+                  <v-btn class="sm-btn" icon="mdi-delete" @click="delItem(item.id)"></v-btn>
                 </template>
               </td>
             </tr>
@@ -76,7 +76,7 @@
             <tr v-for="item in finishedItems" :key="item.id">
               <td>{{ item.text }}</td>
               <td>
-                <v-btn icon="mdi-delete" @click="delFinishedItem(item.id)"></v-btn>
+                <v-btn class="sm-btn" icon="mdi-delete" @click="delFinishedItem(item.id)"></v-btn>
               </td>
             </tr>
           </tbody>
@@ -123,6 +123,13 @@ const onEditSubmit = (id, i) => {
 </script>
 
 <style>
+.sm-btn{
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 10px;
+}
+
+
 .custom-table {
   background-color: #9D9285 !important;
   border-radius: 10px !important;

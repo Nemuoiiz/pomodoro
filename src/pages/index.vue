@@ -6,19 +6,21 @@
         <h1>目前 ✦ {{ currentText }}</h1>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" class="text-center">
         <digit v-for="(data, i) in currentTime" :key="i" :data="data" color="white"></digit>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" class="text-center">
         <!-- 狀態倒數中就停用 || 目前倒數事項長度為 0 && 事項長度為 0 -->
         <v-btn
+        class="mr-5"
         icon="mdi-play"
         :disabled="status === STATUS.COUNTING || (current.length === 0 && items.length === 0)"
         @click="startTimer"
         ></v-btn>
         <!-- 狀態沒有在倒數時可以按 -->
         <v-btn
+        class="mr-5"
         icon="mdi-pause"
         :disabled="status !== STATUS.COUNTING" @click="pauseTimer"></v-btn>
         <v-btn
@@ -114,6 +116,7 @@ const currentTime = computed(() => {
   return m + ':' + s
 })
 </script>
+
 
 
 <route lang="yaml">
