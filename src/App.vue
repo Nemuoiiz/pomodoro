@@ -3,7 +3,7 @@
     <v-app-bar :style="{ backgroundColor: navColor }">
       <v-container class="d-flex align-center">
         <v-app-bar-title lang="en">
-          <v-icon class="mr-2">mdi-timer</v-icon> Pomodoro
+          <v-icon class="mr-2">mdi-clock-star-four-points</v-icon> Pomodoro
         </v-app-bar-title>
         <v-btn prepend-icon="mdi-weather-sunny" to="/">首頁</v-btn>
         <v-btn prepend-icon="mdi-weather-cloudy" to="/list">事項</v-btn>
